@@ -1,5 +1,3 @@
-package Q1;
-
 public class Node {
     Person person;
     Node left;

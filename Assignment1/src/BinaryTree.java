@@ -1,5 +1,3 @@
-package Q1;
-
 import java.util.*;
 
 
@@ -27,16 +25,18 @@ public class BinaryTree {
     }
     public HashMap<Person, Integer> findPersonMap(Node root) {
         HashMap<Person, Integer> result = new HashMap<>();
-        inOrderTraverseTree(root);
+        if (root != null) {
+            inOrderTraverseTree(root);
 
-        for (int i = 0; i <  arr.size(); i++) {
-            int count = 0;
-            for (int j = 0; j < arr.size(); j++) {
-                if (arr.get(i).equals(arr.get(j))) {
-                    count +=1;
+            for (int i = 0; i < arr.size(); i++) {
+                int count = 0;
+                for (int j = 0; j < arr.size(); j++) {
+                    if (arr.get(i).equals(arr.get(j))) {
+                        count += 1;
+                    }
                 }
+                result.put(arr.get(i), count);
             }
-            result.put(arr.get(i), count);
         }
         return result;
     }

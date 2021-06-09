@@ -1,5 +1,3 @@
-package Q1;
-
 import java.util.Objects;
 
 public class Person {
