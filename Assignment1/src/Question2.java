@@ -13,9 +13,11 @@ public class Question2 {
         System.out.println(q2.findMinOperationSum(person));
     }
 
+    // You had to take list of person in the argument but the logic of calucating is correct so that's okay
     private long findMinOperationSum(List<Long> personList) {
         long sum = 0;
         PriorityQueue<Long> pq = new PriorityQueue<>(personList);
+       
 
         while(pq.size()>1) {
             long num1 = pq.poll();
