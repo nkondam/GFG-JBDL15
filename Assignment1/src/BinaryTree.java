@@ -21,6 +21,8 @@ public class BinaryTree {
             inOrderTraverseTree(root.left);
             arr.add(root.getPerson());
             inOrderTraverseTree(root.right);
+            
+            // You need to insert in the map here itself, no need to add in the array and then traverse
         }
     }
     public HashMap<Person, Integer> findPersonMap(Node root) {
@@ -28,7 +30,7 @@ public class BinaryTree {
         if (root != null) {
             inOrderTraverseTree(root);
 
-            for (int i = 0; i < arr.size(); i++) {
+            for (int i = 0; i < arr.size(); i++) {  // why are you populating the map in this way, if you were populate like this then what's the point of taking binary tree.
                 int count = 0;
                 for (int j = 0; j < arr.size(); j++) {
                     if (arr.get(i).equals(arr.get(j))) {
