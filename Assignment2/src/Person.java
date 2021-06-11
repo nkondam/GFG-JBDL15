@@ -110,6 +110,8 @@ public class Person {
     private static void findOldestInCountry(List<Person> people) {
         System.out.println("Q6. Oldest person in every country");
 
+       // function is incomplete
+
     }
 
     private static void findAvgAgeCountryMap(List<Person> people) {
@@ -131,7 +133,7 @@ public class Person {
     private static void vowelFilterPeople(List<Person> people) {
         List<Character> vowels = new ArrayList<>(Arrays.asList('a', 'e', 'i', 'o', 'u', 'A','E','I','O', 'U'));
         List<Person> p = people.stream()
-                .filter(i -> i.getAge()>20 || vowels.contains(i.getName()))
+                .filter(i -> i.getAge()>20 || vowels.contains(i.getName())) // this logic in incorrect since you are checking the complete name in the vowels arraylist which would never be found no matter whether the name contains vowel or not
                 .collect(toList());
         System.out.println("Q2.list of all the people who are either greater than 20 or contain any vowel in their name");
         p.forEach(System.out::println);
